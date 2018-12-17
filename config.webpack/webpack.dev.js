@@ -18,6 +18,6 @@ module.exports = merge(baseConfig, {
         contentBase: resolvePath('dist')
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        // new webpack.HotModuleReplacementPlugin()
     ]
 })

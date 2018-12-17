@@ -6,6 +6,7 @@ const path = require('path')
 const merge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CompressionPlugin = require("compression-webpack-plugin")
 const baseConfig = require('./webpack.base')
 
 const resolvePath = (dir) => path.join(__dirname, '..', dir)
@@ -39,5 +40,12 @@ module.exports = merge(baseConfig, {
         new CleanWebpackPlugin(['dist'], {
             root: resolvePath('')
         }),
+        // 压缩文件
+        /*new CompressionPlugin({
+            test: /.(js|css)$/,
+            // asset: '[path].gz[query]', //目标资源名称。[file] 会被替换成原资源。[path] 会被替换成原资源路径，[query] 替换成原查询字符串
+            algorithm: 'gzip',//算法
+            deleteOriginalAssets: true
+        })*/
     ]
 })

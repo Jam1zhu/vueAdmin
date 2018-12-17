@@ -5,7 +5,7 @@
 -->
 <template>
     <div>
-        <!-- html -->
+        This is home
     </div>
 </template>
 
@@ -14,6 +14,9 @@
         name: "home",
         data(){
             return {}
+        },
+        mounted(){
+//            console.log(this.$store)
         }
     }
 </script>

@@ -5,13 +5,14 @@
 -->
 <template>
     <section class="b_panel">
-        111
-        <!-- html -->
-        <!--<slot name="header">-->
-            <!--<header></header>-->
-        <!--</slot>-->
-        <!--<slot></slot>-->
-        <!--<footer></footer>-->
+        <header class="b_panel_header">
+            <slot name="header">
+                <p class="b_panel_title"><i :class="icon"></i>&nbsp;{{title}}</p>
+            </slot>
+        </header>
+        <section class="b_panel_body">
+            <slot></slot>
+        </section>
     </section>
 </template>
 
@@ -21,17 +22,15 @@
             title: {
                 type: String,
                 default: '标题'
-            }
-        },
-        data(){
-            return {
+            },
+            icon: {
+                type: String,
+                default: ''
             }
         }
     }
 </script>
 
 <style lang="scss">
-    b_panel {
-
-    }
+    @import "style";
 </style>

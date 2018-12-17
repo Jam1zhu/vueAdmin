@@ -94,12 +94,15 @@ module.exports = {
         alias: {
             // 各类非 js 直接引用（import require）静态资源，依赖相对路径加载问题，都可以用 ~ 语法完美解决；
             'images': resolvePath('src/asset/images'),
-            'vue': 'vue/dist/vue.js'
+            'vue': 'vue/dist/vue.js',
+            'views': resolvePath('src/views'),
+            '@': resolvePath('src'),
+            'components': resolvePath('src/components')
         }
     },
     externals: {
         // 防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖
         // 引入外部扩展，可以理解为，引用全局变量
-        jquery: 'jQuery'
+        // jquery: 'jQuery'
     }
 }

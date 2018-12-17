@@ -1,0 +1,18 @@
+.b_panel {
+  box-shadow: 0 0 8px 2px #dfdfdf;
+  border-radius: 2px;
+  transition: all 500ms;
+  &:hover {
+    box-shadow: 0 0 12px 6px #dfdfdf;
+  }
+  &_header {
+    border-bottom: 1px solid #e9eaec
+  }
+  &_title {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  &_body {
+    padding: 16px;
+  }
+}

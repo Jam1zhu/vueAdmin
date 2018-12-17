@@ -5,7 +5,7 @@
 -->
 <template>
     <div>
-        <!-- html -->
+        This is 404
     </div>
 </template>
 
